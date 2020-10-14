@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="movie-info border-b border-gray-800">
+    <div class="movie-info border-b border-blue-800">
         <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row">
             <img src="https://picsum.photos/200/300" alt="movie" class="w-64 md:w-96">
             <div class="md:ml-24">

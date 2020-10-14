@@ -8,8 +8,8 @@
 
     <link rel="stylesheet" href="/css/main.css">
 </head>
-<body class="font-sans bg-gray-900 text-white">
-    <nav class="border-b border-gray-800">
+<body class="font-sans bg-blue-900 text-white">
+    <nav class="border-b border-blue-800">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between px-4 py-6">
             <ul class="flex flex-col md:flex-row items-center">
                 <li>
@@ -28,7 +28,7 @@
             <ul>
                <div class="flex flex-col md:flex-row items-center">
                     <div class="relative mt-3 md:mt-0">
-                        <input type="text" class="bg-gray-800 text-sm rounded-full w-64 px-4 pl-8 py-1 focus:outline-none focus:shadow-outline" placeholder="Search">
+                        <input type="text" class="bg-blue-800 text-sm rounded-full w-64 px-4 pl-8 py-1 focus:outline-none focus:shadow-outline" placeholder="Search">
                         <div class="absolute top-0">
                             <svg class="fill-current w-4 ml-2 text-gray-500" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                             width="28.931px" height="28.932px" viewBox="0 0 28.931 28.932" style="enable-background:new 0 0 28.931 28.932;"
