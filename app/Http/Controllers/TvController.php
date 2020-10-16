@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\ViewModels\MoviesViewModel;
-use App\ViewModels\MovieViewModel;
 use Illuminate\Http\Request;
+use App\ViewModels\TvViewModel;
+use App\ViewModels\TvShowViewModel;
 use Illuminate\Support\Facades\Http;
 
-class MoviesController extends Controller
+class TvController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,25 +16,25 @@ class MoviesController extends Controller
      */
     public function index()
     {
-        $popularMovies = Http::withToken(config('services.tmdb.token'))
-                        ->get(config('services.tmdb.url') . 'movie/popular')
+        $popularTv = Http::withToken(config('services.tmdb.token'))
+                        ->get(config('services.tmdb.url') . 'tv/popular')
                         ->json()['results'];
 
-        $nowPlayingMovies = Http::withToken(config('services.tmdb.token'))
-                        ->get(config('services.tmdb.url') . 'movie/now_playing')
+        $topRatedTv = Http::withToken(config('services.tmdb.token'))
+                        ->get(config('services.tmdb.url') . 'tv/top_rated')
                         ->json()['results'];
 
         $genres = Http::withToken(config('services.tmdb.token'))
                             ->get(config('services.tmdb.url') . 'genre/movie/list')
                             ->json()['genres'];
 
-        $viewModel = new MoviesViewModel(
-            $popularMovies,
-            $nowPlayingMovies,
+        $viewModel = new TvViewModel(
+            $popularTv,
+            $topRatedTv,
             $genres
         );
 
-        return view('movies.index', $viewModel);
+        return view('tv.index', $viewModel);
     }
 
     /**
@@ -66,13 +66,13 @@ class MoviesController extends Controller
      */
     public function show($id)
     {
-        $movie = Http::withToken(config('services.tmdb.token'))
-                        ->get(config('services.tmdb.url') . 'movie/' .$id. '?append_to_response=credits,videos,images')
-                        ->json();
+        $tvshow = Http::withToken(config('services.tmdb.token'))
+        ->get(config('services.tmdb.url') . 'tv/' .$id. '?append_to_response=credits,videos,images')
+        ->json();
 
-        $viewModel = new MovieViewModel($movie);
+        $viewModel = new TvShowViewModel($tvshow);
 
-        return view('movies.show', $viewModel);
+        return view('tv.show', $viewModel);
     }
 
     /**
