@@ -1,5 +1,5 @@
-const mix = require('laravel-mix');
-require('laravel-mix-purgecss')
+const mix = require("laravel-mix");
+require("laravel-mix-purgecss");
 
 /*
  |--------------------------------------------------------------------------
@@ -12,8 +12,6 @@ require('laravel-mix-purgecss')
  |
  */
 
-mix.postCss('resources/css/main.css', 'public/css', [
-        require('tailwindcss'),
-    ])
+mix.postCss("resources/css/main.css", "public/css", [require("tailwindcss")])
     .purgeCss()
-    .browserSync('laravel-movies.me');
+    .browserSync("laravel-movies.me");
