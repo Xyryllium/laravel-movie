@@ -30,7 +30,7 @@ A step by step series of examples that tell you how to get a development env run
 ## Built With
 
 * [Laravel](https://laravel.com/docs/8.x) - The web framework used
-* https://www.markusantonwolf.com/media/pages/blog/tailwind-css/265298487-1596675041/tailwind-css-logo.svg(https://tailwindcss.com/) - A utility-first CSS framework
+* <img src"https://www.markusantonwolf.com/media/pages/blog/tailwind-css/265298487-1596675041/tailwind-css-logo.svg" height="80" width="80"> (https://tailwindcss.com/) - A utility-first CSS framework
 * [Composer](https://getcomposer.org/) - Dependency Manager
 * [NPM](https://www.npmjs.com/) - Package Manager
 
